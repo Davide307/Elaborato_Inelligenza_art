@@ -12,3 +12,6 @@ Quest'ultimo necessita da input:
 - il vettore della quantità dei negozi che i magazzini possono fornire S
 Dadi-1.dzn  : che contiene il primo set di dati su cui è stato testato CSP
 Dati-2.dzn  : che contiene il secondo set di dati su cui è stato testato CSP
+
+Fonti utilizzate :
+Handbook di MiniZinc : https://www.minizinc.org/doc-2.5.5/en/index.html
