@@ -7,6 +7,11 @@ array[1..n,1..m] of int: c ; % costo magazzino-negozio
 array[1..n,1..m] of var 0..1: associazione; % matrice per associare i negozi ai magazzini
 array[1..m] of var 0..1: MagUsati; % magazzini utilizzati
 
+constraint forall(i in 1..n)( % vincoli per garantire che i valori siano compresi fra 10 e 100
+                 forall(j in 1..m)(c[i,j]>=10 /\ c[i,j]<=100));
+constraint forall(j in 1..m)(A[j]>=10 /\ A[j]<=100);
+constraint forall(j in 1..m)(V[j]>=10 /\ V[j]<=100);
+
 constraint forall(j in 1..m)( % vincolo capacità magazzino
                  sum(i in 1..n)(associazione[i,j]) <= S[j] /\
                  S[j]>=1 /\ S[j] <= n);
